@@ -46,10 +46,10 @@ def get_videos(path,output):
             get_videos(os.path.join(root,_dir) , os.path.join(output,_dir))
 
 
-# path = sys.argv[1]
-# output = sys.argv[2]
-path = '/home/syk/test/'
-output = '/home/syk/test/output/'
+path = sys.argv[1]
+output = sys.argv[2]
+#path = '/home/syk/test/'
+#output = '/home/syk/test/output/'
 print(path)
 print(output)
 get_videos(path,output)
