@@ -19,11 +19,11 @@ def video_to_img(root, output_path, video_name):
     ret, frame = cap.read()
     cont = 0
     while(ret):
-        cv2.imshow('frame',frame)
+        #cv2.imshow('frame',frame)
         img_name ='frame' + str(cont).zfill(num_length) +'.jpg'
         cont+=1
         img_path = os.path.join(targetdir,img_name)
-        #print(img_path)
+        print(img_path)
         cv2.imwrite(img_path,frame)
         ret, frame = cap.read()
         if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -36,7 +36,7 @@ def get_videos(path,output):
     
     for root,dirs,files in os.walk(path):
         for _file in files:
-            if _file[-3:]=='avi':
+            if _file[-3:]=='mp4':
                 
                 print(_file)
                 #convert to img
